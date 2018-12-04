@@ -1,5 +1,11 @@
 # Ordinary vk.com chat bot with modules
 
+======
+<h1>Work in progress!</h1>
+The project is not completed yet.
+======
+
+
 How to:
 
 Prepare:
