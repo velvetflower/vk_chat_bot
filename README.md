@@ -6,7 +6,7 @@ The project is not completed yet.
 
 
 
-How to:
+<h2>How to:</h2>
 
 Prepare:
 
