@@ -40,4 +40,6 @@ while True:
     initalizeRequest()
     time.sleep(1)
 
+# todo: add messageId verification to skip send data again and again based on the same command
+
     
