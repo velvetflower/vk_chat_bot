@@ -1,5 +1,7 @@
 import vk_requests
+import time
 from time import gmtime, strftime
+import random
 
 token = ""
 api = vk_requests.create_api(service_token=token, scope=['friends', 'messages', 'wall', 'offline'])
