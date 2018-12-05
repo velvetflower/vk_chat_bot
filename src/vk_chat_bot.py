@@ -4,18 +4,26 @@ from time import gmtime, strftime
 token = ""
 api = vk_requests.create_api(service_token=token, scope=['friends', 'messages', 'wall', 'offline'])
 chatid = 1 #place here your conversation id
+latestCommandID = 0
 
 def sendMessage(par):
     print('# sendMessage called')
     if par[0] == 1: #date
         letsSendIt = api.messages.send(user_id=chatid, random_id=random.getrandbits(128), message=par[1])
         print ('# sent!')
-        
+
 def searchMessage():
+    global latestCommandID
     print('# searchMessage called')
     getMessage = api.messages.search(q='!бот',peer_id='124057393',count=1)
+    print (getMessage)
     getMessageBody = getMessage['items'][0]['body']
-    return getMessageBody
+    getMessageID = getMessage['items'][0]['random_id']
+    if getMessageID != latestCommandID:
+        latestCommandID = getMessage['items'][0]['random_id']
+        return getMessageBody
+    else:
+        print ('#no new messages found')
 
 def initalizeRequest():
     print('# initalizeRequest called')
@@ -39,7 +47,3 @@ while True:
     print('# iteration')
     initalizeRequest()
     time.sleep(1)
-
-# todo: add messageId verification to skip send data again and again based on the same command
-
-    
