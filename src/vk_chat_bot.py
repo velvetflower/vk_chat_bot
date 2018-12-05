@@ -17,7 +17,7 @@ def sendMessage(par):
 def searchMessage():
     global latestCommandID
     print('# searchMessage called')
-    getMessage = api.messages.search(q='!бот',peer_id='124057393',count=1)
+    getMessage = api.messages.search(q='!бот', count=1)
     print (getMessage)
     getMessageBody = getMessage['items'][0]['body']
     getMessageID = getMessage['items'][0]['random_id']
