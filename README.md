@@ -1,4 +1,4 @@
-# Ordinary vk.com chat bot with modules
+# Ordinary vk.com chat bot with modules (outdated)
 
 
 <h2>Work in progress!</h2>
